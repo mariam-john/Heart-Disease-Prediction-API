@@ -1,34 +1,119 @@
-Heart Disease Prediction Analysis
+# Heart Disease Prediction API
 
-This project uses machine learning models, Logistic Regression and XGBoost, to predict the presence of heart disease based on clinical diagnostic data. The analysis includes feature engineering, skewness handling, and model interpretability using SHAP values to uncover non-linear relationships and clinical interactions.This project was done as part of Kaggle competition .
+This project is an end-to-end machine learning application built to predict the likelihood of heart disease using clinical patient data. The project compares Logistic Regression and XGBoost models, applies feature engineering techniques, and uses SHAP analysis to better understand how different clinical factors influence predictions.
 
-Summary
+I worked on this project as part of a Kaggle competition and focused not only on model performance, but also on interpretability and understanding the medical patterns within the data.
 
-The XGBoost Classifier outperformed Logistic Regression. XGBoost Accuracy: 88.7% XGBoost AUC: 0.95 Logistic Regression Accuracy:88.4% Logistic Regression AUC:0.94
+---
 
-Key Features of the Analysis
+# Project Highlights
 
-1.Advanced Feature Engineering
+- Built and compared Logistic Regression and XGBoost models
+- Performed feature engineering and skewness correction
+- Used SHAP values to interpret model predictions
+- Containerized the project using Docker
+- Structured the project as a complete ML pipeline
 
-1.Risk Indicator:Created a custom interaction feature based on the negative correlation between Thallium and Max HR. high Thallium (>6) combined with lower Max HR (<150) was flagged as a high-risk state.
+---
 
-2.skewness Correction:Applied log1p transformations to ST Depression and Cholesterol to normalize highly skewed distributions.
+# Model Performance
 
-3.Feature Scaling:Standardized numerical features (BP,Max HR,Age) using StandardScaler to ensure model stability.
+| Model | Accuracy | AUC Score |
+| Logistic Regression | 88.4% | 0.94 |
+| XGBoost | 88.7% | 0.95 |
 
-Model Interpretability (SHAP)
-Used SHAP (SHLinearly Explainer & TreeExplainer)to explain "black-box" predictions and understand impact of features:
+XGBoost performed slightly better and was able to capture more complex non-linear relationships in the data.
 
-1.Identified Thallium, Chest Pain Type, Max HR as the primary features that drives model output.
+---
 
-2.Linear vs. Non-Linear: Observed that Logistic Regression treats categorical variables (Sex, Thallium) linearly, whereas XGBoost captures complex spreads, indicating deep interactions with other patient variables.
+# Feature Engineering
 
-3.Discovered a significant interaction between Sex and Thallium.
+Some custom preprocessing and feature engineering steps included:
 
-4.While women generally have lower baseline risk, a "Reversible Defect" (Thallium 7) in females acts as a significantly stronger risk signal than in males, likely indicating more advanced disease progression.
+- Creating a risk indicator feature using Thallium and Maximum Heart Rate
+- Applying log transformations to Cholesterol and ST Depression to reduce skewness
+- Standardizing numerical variables such as Age, Blood Pressure, and Max Heart Rate
 
-*Language:Python
+These steps improved both model stability and predictive performance.
 
-Libraries: Pandas, NumPy, Scikit-Learn, XGBoost
+---
 
-Visualization: Matplotlib, Seaborn, SHAP
+# SHAP Interpretability Analysis
+
+To better understand model behavior, SHAP was used to explain predictions and identify the most influential features.
+
+Some important findings included:
+
+- Thallium, Chest Pain Type, and Maximum Heart Rate had the strongest impact on predictions
+- XGBoost captured more complex feature interactions than Logistic Regression
+- A notable interaction was observed between Sex and Thallium levels
+
+One interesting observation was that although women generally showed lower baseline risk, females with a reversible defect in the Thallium test showed a much stronger heart disease risk signal compared to males.
+
+---
+
+# Tech Stack
+
+### Language
+- Python
+
+### Libraries
+- Pandas
+- NumPy
+- Scikit-Learn
+- XGBoost
+- SHAP
+
+### Visualization
+- Matplotlib
+- Seaborn
+
+---
+
+# Project Structure
+
+```bash
+Heart-Disease-Prediction-API/
+│
+├── api/
+├── data/raw/
+├── models/
+├── notebooks/
+├── src/
+│
+├── Dockerfile
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
+# Running the Project with Docker
+
+## Build Docker Image
+
+```bash
+docker build -t heart-disease-api .
+```
+
+## Run the Container
+
+```bash
+docker run -p 5000:5000 heart-disease-api
+```
+
+---
+
+# Future Improvements
+
+
+- Create a frontend dashboard
+- Deploy the model to cloud platforms
+- Add CI/CD workflows using GitHub Actions
+
+---
+
+# About
+
+This project was built to combine machine learning performance with interpretability and practical deployment. The goal was not only to predict heart disease accurately, but also to better understand the clinical patterns driving the predictions.
