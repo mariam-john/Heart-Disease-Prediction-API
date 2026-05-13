@@ -51,7 +51,57 @@ Some important findings included:
 One interesting observation was that although women generally showed lower baseline risk, females with a reversible defect in the Thallium test showed a much stronger heart disease risk signal compared to males.
 
 ---
+---
 
+# Model Visualizations
+
+## XGBoost ROC Curve
+
+![XGBoost ROC Curve](assets/XGBOOST_ROC_AUC.png)
+
+---
+
+## Logistic Regression ROC Curve
+
+![Logistic Regression ROC Curve](assets/Logistic_regression_ROC_AUC.png)
+
+---
+
+## XGBoost Confusion Matrix
+
+![XGBoost Confusion Matrix](assets/XGBOOST_confusion matrix.png)
+
+---
+
+## Logistic Regression Confusion Matrix
+
+![Logistic Regression Confusion Matrix](assets/Linear regression_confusion matrix.png)
+
+---
+
+## XGBoost SHAP Analysis
+
+![XGBoost SHAP](assets/XGBOOST_SHAP.png)
+
+---
+
+## Logistic Regression SHAP Analysis
+
+![Logistic Regression SHAP](assets/Linear regression_SHAP.png)
+
+---
+
+# Sample Predictions
+
+## Prediction Example - No Heart Disease
+
+![Prediction 0](assets/Prediction 0.png)
+
+---
+
+## Prediction Example - Heart Disease Detected
+
+![Prediction 1](assets/Prediction 1.png)
 # Tech Stack
 
 ### Language
