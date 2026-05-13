@@ -69,13 +69,13 @@ One interesting observation was that although women generally showed lower basel
 
 ## XGBoost Confusion Matrix
 
-![XGBoost Confusion Matrix](assets/XGBOOST_confusion matrix.png)
+![XGBoost Confusion Matrix](assets/XGBOOST_confusion_matrix.png)
 
 ---
 
 ## Logistic Regression Confusion Matrix
 
-![Logistic Regression Confusion Matrix](assets/Linear regression_confusion matrix.png)
+![Logistic Regression Confusion Matrix](assets/Logistic_regression_confusion_matrix.png)
 
 ---
 
@@ -87,7 +87,7 @@ One interesting observation was that although women generally showed lower basel
 
 ## Logistic Regression SHAP Analysis
 
-![Logistic Regression SHAP](assets/Linear regression_SHAP.png)
+![Logistic Regression SHAP](assets/Logistic_Regression_SHAP.png)
 
 ---
 
@@ -95,13 +95,13 @@ One interesting observation was that although women generally showed lower basel
 
 ## Prediction Example - No Heart Disease
 
-![Prediction 0](assets/Prediction 0.png)
+![Prediction 0](assets/Prediction_0.png)
 
 ---
 
 ## Prediction Example - Heart Disease Detected
 
-![Prediction 1](assets/Prediction 1.png)
+![Prediction 1](assets/Prediction_1.png)
 # Tech Stack
 
 ### Language
