@@ -56,6 +56,8 @@ One interesting observation was that although women generally showed lower basel
 
 ### Language
 - Python
+### Frameworks
+- FastAPI (for model deployment API)
 
 ### Libraries
 - Pandas
@@ -68,7 +70,9 @@ One interesting observation was that although women generally showed lower basel
 - Matplotlib
 - Seaborn
 
----
+### Deployment
+- Docker
+- FastAPI
 
 # Project Structure
 
